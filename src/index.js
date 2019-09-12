@@ -1,16 +1,8 @@
-// This is the JavaScript entry file - your code begins here
-// Do not delete or rename this file ********
-
-// An example of how you import jQuery into a JS file if you use jQuery in that file
 import $ from 'jquery';
-
-// An example of how you tell webpack to use a CSS (SCSS) file
+import domUpdates from '../src/domUpdates'
 import './css/base.scss';
+import User from '../src/User'
 
-// An example of how you tell webpack to use an image (also need to link to it in the index.html)
-import './images/turing-logo.png'
-
-// console.log('This is the JavaScript entry file - your code begins here.');
 
 let apiRequestUser = fetch('https://fe-apps.herokuapp.com/api/v1/overlook/1904/users/users').then((response) => response.json());
 
@@ -32,9 +24,14 @@ Promise.all([ apiRequestUser, apiRequestRooms, apiRequestBookings, apiRequestRoo
   combinedData["apiRequestRooms"] = values[1];
   combinedData["apiRequestBookings"] = values[2];
   combinedData["apiRequestRoomService"] = values[3];
-  console.log(combindedData)
-  return combinedData;
+  //  return combinedData;
+  passFetchData(combinedData)
 });
 
+// console.log(combinedData)
+function passFetchData(data) {
+  console.log(data.apiRequestUser.users)
+  let user1 = new User(data[0])
+}
 
 
