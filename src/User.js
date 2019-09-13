@@ -1,11 +1,13 @@
 class User {
-  constructor(user) {
-    // console.log(user)
-    // this.user = user;
-    this.id = user.id;
-    this.name = user.name;
+  constructor(users) {
+    this.users = [] || users;
+    // this.id = user.id;
+    // this.name = user.name;
   }
 
+  getUser() {
+    
+  }
 }
 
 export default User;
