@@ -1,5 +1,3 @@
-import index from "./index.js";
-
 const domUpdates = {
 
   displayDate(date) {

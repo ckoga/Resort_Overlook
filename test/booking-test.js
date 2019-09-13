@@ -1,6 +1,6 @@
 import chai from 'chai';
 const expect = chai.expect;
-import index from '../src/index';
+// import index from '../src/index';
 import spies from 'chai-spies';
 import Booking from '../src/Booking';
 import User from '../src/User';
@@ -19,7 +19,7 @@ describe('User class', () => {
     expect(booking).to.be.an.instanceof(Booking);
   });
 
-  it.only('should be able to calculate the total bookings for today', () => {
+  it('should be able to calculate the total bookings for today', () => {
     expect(booking.calculateRoomsBookedToday(index.getDay())).to.eql();
   });
 })
