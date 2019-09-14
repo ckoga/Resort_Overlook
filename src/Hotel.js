@@ -14,16 +14,22 @@ class Hotel {
     return `${year}/${month}/${day}`
   }
   
-  dailyRoomService(date) {
-    let todaysOrders = this.roomService.filter(order => {
-      return order.date === date
-    });
+  getDailyRoomService(date) {
+    let todaysOrders = this.roomService.filter(order => order.date === date);
 
     return todaysOrders.reduce((acc, bill) => {
       acc += bill.totalCost;
       return acc
     }, 0).toFixed(2);
   }
+
+  getDailyBookings(date) {
+    let todaysBookings = this.bookings.filter(booking => booking.date === date);
+    
+    return (todaysBookings.length / this.rooms.length) * 100 + '%'
+  }
+
+
 
 
 }

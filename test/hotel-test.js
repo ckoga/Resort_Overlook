@@ -25,7 +25,13 @@ describe('Hotel class', () => {
   });
 
   it('should return total room service ordered today', () => {
-    expect(hotel.dailyRoomService('2019/09/26')).to.equal('28.76')
-  })
+    expect(hotel.getDailyRoomService('2019/09/26')).to.equal('28.76')
+  });
+
+  it('should calculate the total rooms available', () => {
+    expect(hotel.getDailyBookings('2019/09/01')).to.equal('20%')
+  });
+
+  
 
 });
