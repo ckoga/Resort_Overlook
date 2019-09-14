@@ -3,15 +3,16 @@ const expect = chai.expect;
 // import index from '../src/index';
 import spies from 'chai-spies';
 import Booking from '../src/Booking';
+import data from './sample-data'
 import User from '../src/User';
 import domUpdates from '../src/domUpdates';
 chai.use(spies);
 
 let booking;
 
-describe('User class', () => {
+describe('Booking class', () => {
   beforeEach(() => {
-    Promise.all()
+    booking = new Booking(data['apiRequestBookings'].Bookings)
 
   });
 
@@ -19,7 +20,5 @@ describe('User class', () => {
     expect(booking).to.be.an.instanceof(Booking);
   });
 
-  it('should be able to calculate the total bookings for today', () => {
-    expect(booking.calculateRoomsBookedToday(index.getDay())).to.eql();
-  });
+
 })

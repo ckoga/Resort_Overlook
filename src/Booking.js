@@ -5,7 +5,7 @@ class Booking {
   }
 
   calculateRoomsBookedToday(date) {
-    console.log(this.bookings)
+    // console.log(this.bookings)
   }
 }
 
