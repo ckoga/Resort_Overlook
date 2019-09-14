@@ -1,11 +1,14 @@
 import $ from 'jquery';
+import 'jquery-ui-bundle';
 import './css/base.scss';
 import domUpdates from '../src/domUpdates';
+import Hotel from '../src/Hotel';
 // import User from '../src/User';
 // import Room from '../src/Room';
 // import Booking from '../src/Booking';
 // import RoomService from '../src/RoomService';
-import Hotel from '../src/Hotel';
+
+
 
 
 let apiRequestUser = fetch('https://fe-apps.herokuapp.com/api/v1/overlook/1904/users/users').then((response) => response.json());
@@ -77,3 +80,6 @@ domUpdates.dailyRoomsBooked(getDate());
 // console.log(booking)
 // booking.calculateRoomsBookedToday(getDate());
 
+$(function () {
+  $("#ui-tabs").tabs();
+})
