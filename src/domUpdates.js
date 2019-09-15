@@ -9,8 +9,8 @@ const domUpdates = {
     $('#currentDate').text(date)
   },
 
-  dailyRoomsBooked(date) {
-    
+  displayRoomsBooked(percentage) {
+    $('#available-rooms').text(percentage)
   },
 }
 
