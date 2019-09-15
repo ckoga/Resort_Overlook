@@ -12,6 +12,11 @@ const domUpdates = {
   displayRoomsBooked(percentage) {
     $('#available-rooms').text(percentage)
   },
+
+  displayTotalRoomService(total) {
+    $('#total-orders').text(total)
+  },
+
 }
 
 export default domUpdates;

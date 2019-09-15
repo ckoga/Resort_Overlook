@@ -7,8 +7,8 @@ import Room from '../src/Room';
 import Booking from '../src/Booking';
 import domUpdates from '../src/domUpdates';
 
-
 $(document).ready(() => {
+  
   $('#ui-tabs').tabs();
   
   let apiRequestUser = fetch('https://fe-apps.herokuapp.com/api/v1/overlook/1904/users/users')
@@ -52,25 +52,33 @@ $(document).ready(() => {
     
     
   function initialization(fData) {
+    
     passHotelData(fData)
     getTodaysDate();
     domUpdates.displayDate(getTodaysDate());
     domUpdates.displayRoomsBooked(hotel.getDailyBookings(getTodaysDate()));
+    domUpdates.displayTotalRoomService(hotel.getDailyRoomService(getTodaysDate()))
   } 
-
-  console.log('lvl1: ', combinedData)
-  console.log('fetch: ', hotel)
+  
   
   function getTodaysDate() {
     let year = new Date().getFullYear()
     let month = new Date().getMonth() + 1;
     let day = new Date().getDate();
 
-    return `${year}/${month}/${day}`
+    return `${year}/${month < 10 ? '0' + month : '' + month}/${day < 10 ? '0' + day : '' + day}`
   }
  
-  // $('#ui-tabs').tabs();
+ 
   
-  
+  // console.log('fetch: ', fData["apiRequestBookings"].bookings.filter(order => console.log(order.date))
+  // )
+  // console.log('lvl1: ', getTodaysDate());
+  // console.log(hotel.bookings)
+  // console.log('method: ', hotel.getDailyBookings(getTodaysDate()))
+
+
+
+
 });
         

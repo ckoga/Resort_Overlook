@@ -1,11 +1,11 @@
 class Hotel {
   constructor(hotelData) {
-    // console.log('hotel: ', hotelData["apiRequestBookings"].bookings)
     this.users = hotelData["apiRequestUser"].users;
     this.rooms = hotelData["apiRequestRooms"].rooms;
     this.bookings = hotelData["apiRequestBookings"].bookings;
     this.roomService = hotelData["apiRequestRoomService"].roomServices;
   }
+    // console.log('hotel: ', hotelData["apiRequestBookings"].bookings)
   
   // getTodaysDate() {
   //   let year = new Date().getFullYear()
