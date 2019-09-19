@@ -1,9 +1,17 @@
 // import $ from 'jquery';
-// import 'jquery-ui-bundle';
+import 'jquery-ui-bundle';
 // import './css/base.scss';
 
 
 const domUpdates = {
+
+  // displayTabs() {
+  //   $('.tabs-conatiner div').hide();
+  //   $('.tabs-conatiner div:first').addClass('tab-active')
+  // },
+
+  
+
 
   displayDate(date) {
     $('#currentDate').text(date)
@@ -17,6 +25,10 @@ const domUpdates = {
     $('#total-orders').text(total)
   },
 
+  displayDailyRevenue(total) {
+    $('#daily-revenue').text(total)
+  },
+ 
 }
 
 export default domUpdates;

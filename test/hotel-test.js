@@ -32,6 +32,7 @@ describe('Hotel class', () => {
     expect(hotel.getDailyBookings('2019/09/01')).to.equal('20%')
   });
 
-  
-
+  it('should be able to calculate total revenue for today', () => {
+    expect(hotel.getTotalRevenueToday('2019/09/26')).to.equal('28.76')
+  });
 });

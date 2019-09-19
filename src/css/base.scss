@@ -4,3 +4,39 @@ $primary-background: lightgrey;
 body {
   background-color: $primary-background;
 }
+
+.ui-widgets {
+  max-width: 1000px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.tabs-nav li {
+  width: 50%;
+  border-top-left-radius: 6px;
+}
+
+a {
+  background: #eaeaed;
+  border: 1px solid #cecfd5;
+  color: #0276b0;
+  display: block;
+  font-weight: 600;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.tab-active a {
+  background: #fff;
+  border-bottom-color: transparent;
+  color: #1da03a;
+  cursor: default;
+  text-decoration: none;
+}
+

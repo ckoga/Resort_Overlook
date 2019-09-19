@@ -6,31 +6,37 @@
   <body>
     <h1>Overlook</h1>
     <p id="currentDate"></p>
+
+    <!-- UI TABS -->
+
     <div id="ui-tabs" class="ui-widgets">
-      <ul>
+      <ul class="tabs-nav">
         <li><a href="#tabs__main">Main</a></li>
         <li><a href="#tabs__guest">Guest</a></li>
         <li><a href="#tabs__booking">Bookings</a></li>
         <li><a href="#tabs__room-service">Room Service</a></li>
         <li><a href="#tabs__rooms">Rooms</a></li>
       </ul>
-      <div id="tab-main" class="div__tabs">
-        <p>Overlook Resort</p>
-      </div>
-      <div id="tab-guest" class="div__tabs">
-        <p>Guest</p>
-      </div>
-      <div id="tab-booking" class="div__tabs">
-        <p>Booking</p>
-        <p id="available-rooms"></p>
-      </div>
-      <div id="tab-room-service" class="div__tabs">
-        <p>Room Service</p>
-        <p id="total-orders"></p>
-      </div>
-      <div id="tab-rooms" class="div__tabs">
-        <p>Rooms</p>
-      </div>
+      <!-- <div class="tabs-container"> -->
+        <div id="tabs__main" class="div__tabs">
+          <p>Overlook Resort</p>
+          <p id="daily-revenue"></p>
+        </div>
+        <div id="tabs__guest" class="div__tabs">
+          <p>Guest</p>
+        </div>
+        <div id="tabs__booking" class="div__tabs">
+          <p>Booking</p>
+          <p id="available-rooms"></p>
+        </div>
+        <div id="tabs__room-service" class="div__tabs">
+          <p>Room Service</p>
+          <p id="total-orders"></p>
+        </div>
+        <div id="tabs__rooms" class="div__tabs">
+          <p>Rooms</p>
+        </div>
+      <!-- </div> -->
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   </body>
