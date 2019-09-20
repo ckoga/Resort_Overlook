@@ -10,11 +10,11 @@ const domUpdates = {
   //   $('.tabs-conatiner div:first').addClass('tab-active')
   // },
 
-  
+
 
 
   displayDate(date) {
-    $('#currentDate').text(date)
+    $('#current-date').text(date)
   },
 
   displayRoomsBooked(percentage) {

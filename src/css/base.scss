@@ -5,6 +5,20 @@ body {
   background-color: $primary-background;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  
+  h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+
+  p {
+    margin: 0 35px;
+  }
+}
+
 .ui-widgets {
   max-width: 1000px;
 }
@@ -12,13 +26,13 @@ body {
 ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   list-style-type: none;
 }
 
 .tabs-nav li {
   width: 50%;
   border-top-left-radius: 6px;
+  
 }
 
 a {
@@ -38,5 +52,10 @@ a {
   color: #1da03a;
   cursor: default;
   text-decoration: none;
+}
+
+.div__tabs {
+  border: 1px solid grey;
+  width: 33%;
 }
 
